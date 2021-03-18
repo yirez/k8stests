@@ -4,4 +4,8 @@ metadata:
   name: myapp-pod
   labels:
     app: myappnameLabel
+    naber: test1naber-custom
 spec:
+  containers:
+    - name: nginx-container
+      image: nginx
