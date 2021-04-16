@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: simple-webapp
+  labels:
+    name: some-label
+spec:
+  containers:
+    - name: simple-webapp
+      image: some-image
+      ports:
+        - containerPort: 8080
+    - name: log-agent
+      image: some-log-image

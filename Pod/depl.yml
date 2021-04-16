@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: some-rep-set
+  labels:
+    app: rep-set
+    type: frontend-repset
+spec:
+  template:
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myappnameLabel
+        naber: test1naber-custom
+        type: omgwtf
+    spec:
+      containers:
+        - name: nginx-container
+          image: nginx
+  replicas: 3
+  selector:
+    matchLabels:
+      type: omgwtf
